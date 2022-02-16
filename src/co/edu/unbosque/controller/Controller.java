@@ -45,9 +45,10 @@ public class Controller implements ActionListener{
 		}
 		else if(com.equals("Pventas")) {
 			System.out.println("Promedio ventas");
-			/*vistaP.getContentPane().remove(vistaP.getPi());
-			vistaP.getContentPane().add(vistaP.getPr());
-			vistaP.getPr().setVisible(true);*/
+			vistaP.getContentPane().remove(vistaP.getPi());
+			vistaP.getPP().setVisible(false);
+			vistaP.getContentPane().add(vistaP.getPP());
+			vistaP.getPP().setVisible(true);
 		}
 		else if(com.equals("Descripcion")) {
 			System.out.println("Descripcion");

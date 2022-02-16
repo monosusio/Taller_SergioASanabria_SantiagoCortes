@@ -10,6 +10,7 @@ public class Ventana_Principal extends JFrame {
 	
 	public Panel_Inicial Pi;
 	
+	public Panel_PromedioVentas PP;
 	
 	public Ventana_Principal() {
 
@@ -33,6 +34,9 @@ public class Ventana_Principal extends JFrame {
 		Pi.setPreferredSize(new Dimension(200,450));
 		getContentPane().add(Pi, BorderLayout.CENTER);
 		
+		PP = new Panel_PromedioVentas();
+		PP.setPreferredSize(new Dimension(200,450));
+		
 	}
 
 	public Panel_Inicial getPi() {
@@ -42,5 +46,15 @@ public class Ventana_Principal extends JFrame {
 	public void setPi(Panel_Inicial pi) {
 		Pi = pi;
 	}
+
+	public Panel_PromedioVentas getPP() {
+		return PP;
+	}
+
+	public void setPP(Panel_PromedioVentas pP) {
+		PP = pP;
+	}
+	
+	
 
 }
