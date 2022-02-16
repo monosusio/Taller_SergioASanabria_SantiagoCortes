@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class Panel_Inicial extends JPanel{
 	
-	private JButton BotonVtotales, BotonDfacturas,BotonCvendidas,BotonPventas,BotonDescripcion;
+	private JButton BotonVtotales, BotonDfacturas,BotonCunidades,BotonPventas,BotonDescripcion;
 	
 	public Panel_Inicial() {
 
@@ -28,9 +28,9 @@ public class Panel_Inicial extends JPanel{
 		BotonDfacturas.setActionCommand("Dfacturas");
 		add(BotonDfacturas);
 		
-		BotonCvendidas = new JButton("Cantidad de unidades");
-		BotonCvendidas.setActionCommand("Cvendidas");
-		add(BotonCvendidas);
+		BotonCunidades = new JButton("Cantidad de unidades");
+		BotonCunidades.setActionCommand("Cunidades");
+		add(BotonCunidades);
 		
 		BotonPventas = new JButton("Promedio de ventas");
 		BotonPventas.setActionCommand("Pventas");
@@ -41,21 +41,47 @@ public class Panel_Inicial extends JPanel{
 		add(BotonDescripcion);
 	}
 
-	public JButton getBotonRegis() {
+	public JButton getBotonVtotales() {
 		return BotonVtotales;
 	}
 
-	public void setBotonRegis(JButton botonRegis) {
-		BotonVtotales = botonRegis;
+	public void setBotonVtotales(JButton botonVtotales) {
+		BotonVtotales = botonVtotales;
 	}
 
-	public JButton getBotonIniciar() {
+	public JButton getBotonDfacturas() {
 		return BotonDfacturas;
 	}
 
-	public void setBotonIniciar(JButton botonIniciar) {
-		BotonDfacturas = botonIniciar;
+	public void setBotonDfacturas(JButton botonDfacturas) {
+		BotonDfacturas = botonDfacturas;
 	}
+
+	public JButton getBotonCvendidas() {
+		return BotonCunidades;
+	}
+
+	public void setBotonCvendidas(JButton botonCvendidas) {
+		BotonCunidades = botonCvendidas;
+	}
+
+	public JButton getBotonPventas() {
+		return BotonPventas;
+	}
+
+	public void setBotonPventas(JButton botonPventas) {
+		BotonPventas = botonPventas;
+	}
+
+	public JButton getBotonDescripcion() {
+		return BotonDescripcion;
+	}
+
+	public void setBotonDescripcion(JButton botonDescripcion) {
+		BotonDescripcion = botonDescripcion;
+	}
+
+
 	
 	
 
