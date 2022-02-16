@@ -10,7 +10,7 @@ public class CSVReader {
 	
 	public static void main(String[] args) throws IOException{
 		
-		File csvFile = new File("D:/Converter/input/Csv_file.csv");
+		File csvFile = new File("C:\\Users\\USUARIO\\Taller_SergioASanabria_SantiagoCortes\\archivo.csv");
 				BufferedReader br = new BufferedReader(new FileReader(csvFile));
 				String line = "";
 				try {
