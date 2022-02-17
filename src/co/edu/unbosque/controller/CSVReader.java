@@ -13,7 +13,13 @@ public class CSVReader {
 	private BufferedReader Lector;
 	private String Linea;
 	private String partes [] = null;
+	public String nombreArchivo;
+	private File f;
 	
+	public CSVReader() {
+		f = new File("archivo\\data.csv");
+	}
+
 	
 	public void leerArchivo(String nombreArchivo) {
 		try {
@@ -36,6 +42,17 @@ public class CSVReader {
 
 	private void imprimirLinea() {
 		for (int i = 0; i < partes.length; i++) {
-			System.out.print(partes[i]+ "    |    ");
+			System.out.print(partes[7]+ "    |    ");
 		}
+		
+	}
+
+
+	public String getNombreArchivo() {
+		return nombreArchivo;
+	}
+
+
+	public void setNombreArchivo(String nombreArchivo) {
+		this.nombreArchivo = nombreArchivo;
 	}}

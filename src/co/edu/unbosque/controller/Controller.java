@@ -10,7 +10,8 @@ import co.edu.unbosque.view.Ventana_Principal;
 public class Controller implements ActionListener{
 	
 	private Ventana_Principal vistaP;
-	
+	public CSVReader leer;
+		
 	public Controller() {
 		vistaP = new Ventana_Principal();
 		AsignarOyentes();

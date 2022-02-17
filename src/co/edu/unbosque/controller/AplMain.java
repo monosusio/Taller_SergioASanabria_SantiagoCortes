@@ -6,7 +6,7 @@ public class AplMain {
 		CSVReader archivo = new CSVReader();
 		Controller controller = new Controller();
 		
-		//archivo.leerArchivo("C:\\Users\\PC\\Taller_SergioASanabria_SantiagoCortes\\archivo\\data.csv");
+		archivo.leerArchivo("C:\\Users\\PC\\Taller_SergioASanabria_SantiagoCortes\\archivo\\data.csv");
 		
 	}
 
