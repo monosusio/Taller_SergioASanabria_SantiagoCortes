@@ -5,16 +5,21 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
+import co.edu.unbosque.model.CSVReader;
+import co.edu.unbosque.model.Productos;
 import co.edu.unbosque.view.Ventana_Principal;
 
 public class Controller implements ActionListener{
 	
 	private Ventana_Principal vistaP;
 	public CSVReader leer;
+	private Productos producto;
 		
 	public Controller() {
 		vistaP = new Ventana_Principal();
 		AsignarOyentes();
+		leer = new CSVReader();
+		leer.leerArchivo("archivo\\data.csv");
 	}
 	
 	public void AsignarOyentes() {
@@ -51,11 +56,14 @@ public class Controller implements ActionListener{
 			vistaP.getContentPane().add(vistaP.getPP());
 			vistaP.getPP().setVisible(true);
 		}
+		
+		///// mostrar paises
 		else if(com.equals("Descripcion")) {
 			System.out.println("Descripcion");
-			/*vistaP.getContentPane().remove(vistaP.getPi());
-			vistaP.getContentPane().add(vistaP.getPr());
-			vistaP.getPr().setVisible(true);*/
+			String pais="United Kingdom";
+			leer.setPais(pais);
+			leer.buscar_pais();
+
 		}
 	}
 

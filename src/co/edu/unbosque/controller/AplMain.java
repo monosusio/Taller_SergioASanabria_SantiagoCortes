@@ -1,12 +1,13 @@
 package co.edu.unbosque.controller;
 
+import co.edu.unbosque.model.CSVReader;
+
 public class AplMain {
 
 	public static void main(String[] args) {
-		CSVReader archivo = new CSVReader();
 		Controller controller = new Controller();
 		
-		archivo.leerArchivo("C:\\Users\\PC\\Taller_SergioASanabria_SantiagoCortes\\archivo\\data.csv");
+		
 		
 	}
 

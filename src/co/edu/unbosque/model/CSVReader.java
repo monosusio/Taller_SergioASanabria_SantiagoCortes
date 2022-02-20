@@ -1,4 +1,4 @@
-package co.edu.unbosque.controller;
+package co.edu.unbosque.model;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -15,6 +15,8 @@ public class CSVReader {
 	private String partes [] = null;
 	public String nombreArchivo;
 	private File f;
+	public String pais;
+	public Productos producto;
 	
 	public CSVReader() {
 		f = new File("archivo\\data.csv");
@@ -26,25 +28,51 @@ public class CSVReader {
 			Lector = new BufferedReader(new FileReader(nombreArchivo));
 			while ((Linea = Lector.readLine()) != null) {
 			partes = Linea.split(",");
-			imprimirLinea();
+			añadir_producto();
 			System.out.println();
 			}
 			Lector.close();
 			Linea = null;
-			partes = null;
+			
 		
 		}catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e);
 		}
 
 		}
+	
 
 
-	private void imprimirLinea() {
+	public void añadir_producto() {
 		for (int i = 0; i < partes.length; i++) {
-			System.out.print(partes[7]+ "    |    ");
+			System.out.print(partes[i]+ "    |    ");//+"\n");
+		
+			Productos producto = new Productos(partes[0], partes[1], partes[2], partes[3], partes[4],partes[5], partes[6], partes[7]);
 		}
 		
+		System.out.println(producto);
+		
+	}
+	
+	public void buscar_pais() {
+		
+		for (int i = 0; i < partes.length; i++) {
+			if(producto.equals(pais))
+			System.out.print(producto.getCountry()+ "    |    ");
+			
+			}
+		}
+	
+	
+
+
+	public String getPais() {
+		return pais;
+	}
+
+
+	public void setPais(String pais) {
+		this.pais = pais;
 	}
 
 
